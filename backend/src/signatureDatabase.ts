@@ -1,20 +1,21 @@
 // src/signatureDatabase.ts
-// --- This file acts as the central "brain" for our detection logic ---
+// This file acts as the central "brain" for our detection logic
 
-// --- 1. For File Attachments ---
+// --- 1. For File Attachments (Used by attachmentScanner.ts) ---
 
 /**
  * A Set of industry-standard fuzzy hashes (ssdeep) for known malware.
  * We use a fuzzy hash to detect malware even if it's been slightly modified.
  *
  * This hash: "3:a+JraNvsgzsVqSwHq9:tJuOgzsko"
- * Corresponds to: The 68-byte EICAR standard antivirus test file.
+ * Corresponds to: The EICAR standard antivirus test file (a safe test virus).
  */
 export const virusSignatures = new Set<string>([
   "3:a+JraNvsgzsVqSwHq9:tJuOgzsko"
+  // You could add more virus hashes here
 ]);
 
-// --- 2. For Malicious Email Bodies ---
+// --- 2. For Malicious Email Bodies (Used by bodyScanner.ts) ---
 
 /**
  * An array of keyword Sets. An email is flagged if *all* keywords
@@ -30,19 +31,22 @@ export const maliciousKeywordSets = [
   new Set(["urgent", "action", "required", "mailbox", "full"]),
   // Set 4: Invoice scam
   new Set(["invoice", "attached", "payment", "review"])
+  // You could add new Set(...) lines here
 ];
 
 
-// --- 3. For Malicious Links (Phishing) ---
+// --- 3. For Malicious Links (Phishing) (Used by linkScanner.ts) ---
 
 /**
  * A Set of known malicious domains.
  * This is used to check against the hostname of any link found in the email.
  * It's designed to catch common typosquatting and subdomain tricks.
+ * (Using a 'Set' is very fast for lookups, much faster than an array!)
  */
 export const maliciousDomains = new Set<string>([
-  "microsft-support.com",
-  "paypal.security-center.com",
+  "microsft-support.com",       // Typo of "microsoft"
+  "paypal.security-center.com", // Subdomain trick
   "login-wellsfargo.net",
   "amazon-prime.org"
+  // You could add more bad domains here
 ]);
