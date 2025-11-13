@@ -1,0 +1,35 @@
+Date: Tue, 11 Nov 2025 10:00:00 -0500
+From: "Friendly Co-worker" <good.sender@company.com>
+To: "Me" <me@my-email.com>
+Subject: Project Update
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="----BoundaryMixed"
+Return-Path: <good.sender@company.com>
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@company.com;
+       spf=pass (google.com: domain of good.sender@company.com designates 1.2.3.4 as permitted sender)
+
+------BoundaryMixed
+Content-Type: multipart/alternative; boundary="----BoundaryAlt"
+
+------BoundaryAlt
+Content-Type: text/plain; charset="UTF-8"
+
+Hello team,
+
+Here is the document for our meeting. Please review it at:
+https://www.google.com/docs/safe
+
+Thanks,
+Admin
+
+------BoundaryAlt--
+
+------BoundaryMixed
+Content-Type: text/plain; charset="US-ASCII"; name="safe.txt"
+Content-Disposition: attachment; filename="safe.txt"
+Content-Transfer-Encoding: base64
+
+VGhpcyBpcyBhIHNhZmUgZmlsZS4=
+
+------BoundaryMixed--

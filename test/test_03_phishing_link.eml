@@ -1,0 +1,13 @@
+Date: Tue, 11 Nov 2025 10:02:00 -0500
+From: "Wells Fargo" <alerts@wellsfargo.com>
+To: "Me" <me@my-email.com>
+Subject: Account Alert
+MIME-Version: 1.0
+Content-Type: text/html; charset="UTF-8"
+Return-Path: <alerts@wellsfargo.com>
+Authentication-Results: mx.google.com; dkim=pass; spf=pass
+
+<p>Hello,</p>
+<p>Please log in to your account:</p>
+<p><a href="https://login-wellsfargo.net/auth">https://www.wellsfargo.com/auth</a></p>
+<p>Thanks,<br>The Admin Team</p>

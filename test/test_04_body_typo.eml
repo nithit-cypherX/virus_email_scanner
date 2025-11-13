@@ -1,0 +1,15 @@
+Date: Tue, 11 Nov 2025 10:03:00 -0500
+From: "Security" <security@company.com>
+To: "Me" <me@my-email.com>
+Subject: Security Alert
+MIME-Version: 1.0
+Content-Type: text/plain; charset="UTF-8"
+Return-Path: <security@company.com>
+Authentication-Results: mx.google.com; dkim=pass; spf=pass
+
+Hello,
+
+We detected unusial signin activity on your acount. Please
+log in immediately to secure your acount.
+
+This email is not monitored.

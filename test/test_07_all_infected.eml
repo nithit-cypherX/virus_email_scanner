@@ -1,0 +1,35 @@
+Date: Tue, 11 Nov 2025 10:06:00 -0500
+From: "PayPal" <service@paypal.security-center.com>
+To: "Me" <me@my-email.com>
+Subject: URGENT: Action Required on your Account
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="----BoundaryMixed"
+Return-Path: <service@paypal.security-center.com>
+Authentication-Results: mx.google.com;
+       dkim=pass;
+       spf=fail (google.com: domain of paypal.security-center.com is not permitted)
+
+------BoundaryMixed
+Content-Type: multipart/alternative; boundary="----BoundaryAlt"
+
+------BoundaryAlt
+Content-Type: text/plain; charset="UTF-8"
+
+Urgent Action Required: Your mailbox is almost full.
+
+This is a final notice. Your account has unusual sign-in activity.
+Click here to verify: https://paypal.security-center.com/login
+
+Please also review the attached invoice for payment.
+
+------BoundaryAlt--
+
+------BoundaryMixed
+Content-Type: application/octet-stream; name="eicar.com"
+Content-Disposition: attachment; filename="eicar.com"
+Content-Transfer-Encoding: base64
+
+WDVPIVAlQEFQWzRcUFpYNTQoUF4pN0NDKTd9JEVJQ0FSLVNUQU5EQVJELUFOVElW
+SVJVUy1URVNULUZJTEUhJEgrSCo=
+
+------BoundaryMixed--
